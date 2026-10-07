@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Agenda & To-Do List</title>
+    <link rel="icon" href="asset/icon.png" />
+    
+    <!-- Font Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Urbanist:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="app-container">
+      <div class="todo-wrapper">
+        
+        <!-- Header -->
+        <header class="header-section">
+          <div class="badge-agenda">AGENDA HARI INI</div>
+          <h1 class="main-title">My To-Do List</h1>
+          <p class="subtitle">Kelola dan selesaikan target harianmu dengan rapi</p>
+        </header>
+
+        <!-- Rekap Statistik -->
+        <section class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-label">Total Agenda</span>
+            <span id="stat-total" class="stat-number">0</span>
+          </div>
+          <div class="stat-card stat-pending">
+            <span class="stat-label">Pending</span>
+            <span id="stat-belum" class="stat-number">0</span>
+          </div>
+          <div class="stat-card stat-completed">
+            <span class="stat-label">Finished</span>
+            <span id="stat-selesai" class="stat-number">0</span>
+          </div>
+        </section>
+
+        <!-- Input Form -->
+        <section class="input-container">
+          <div class="input-bar">
+            <input
+              type="text"
+              id="input-tugas"
+              placeholder="Tambahkan tugas baru hari ini..."
+              autocomplete="off"
+            />
+            <button id="btn-tambah">+ Tambah</button>
+          </div>
+        </section>
+
+        <!-- List Tugas -->
+        <section class="task-section">
+          <ul id="daftar-tugas"></ul>
+
+          <!-- Pesan Saat Kosong -->
+          <div id="pesan-kosong" class="state-card">
+            <img src="asset/icon.png" alt="Belum ada tugas" />
+            <p>Belum ada target yang dibuat. Yuk, mulai buat tugas pertamamu!</p>
+          </div>
+
+          <!-- Pesan Saat Semua Selesai -->
+          <div id="pesan-selesai" class="state-card hidden">
+            <img src="asset/selesai.png" alt="Semua tugas selesai" />
+            <p>Mantap! Semua rencana tugas hari ini sudah berhasil diselesaikan 🎉</p>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="penutupan">
+          <p>© 2026 M. Desta Permana Nugraha</p>
+        </footer>
+
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
